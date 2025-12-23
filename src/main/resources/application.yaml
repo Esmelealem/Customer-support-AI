@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: AI Prod
+  datasource:
+#    url: jdbc:postgresql://localhost:5433/AI_DB
+    url: jdbc:postgresql://localhost:5432/support_ai
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none   # IMPORTANT: Let Flyway manage schema
+    show-sql: true
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+openai:
+  api-key: ${OPENAI_API_KEY}
+logging:
+  level:
+    org.flywaydb: DEBUG
+server:
+  port: 9092

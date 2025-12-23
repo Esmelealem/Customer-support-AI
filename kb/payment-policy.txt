@@ -1,0 +1,2 @@
+Customers can pay using credit card, debit card, or PayPal.
+All payments are processed securely.
